@@ -370,6 +370,25 @@ function primesUpTo(n) {
 //     -> { wordCount: 4, longestWord: "quick" }
 // ---------------------------------------------------------------------
 function wordStatistics(sentence) {
+    let trimmed = sentence.trim();
+
+    if (trimmed === "") {
+        return { wordCount: 0, longestWord: "" };
+    }
+
+    let words = trimmed.split(/\s+/);
+
+    let longest = words[0];
+    for (let i = 1; i < words.length; i++) {
+        if (words[i].length > longest.length) {
+            longest = words[i];
+        }
+    }
+
+    return {
+        wordCount: words.length,
+        longestWord: longest
+    };
 }
 
 
