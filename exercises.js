@@ -264,8 +264,23 @@ function rockPaperScissors(choice1, choice2) {
 // highest age, return the one that comes first. Empty array gives "".
 // ---------------------------------------------------------------------
 function findOldest(people) {
-}
+    if (people.length === 0) {
+        return "";
+    }
+    let maxAge = people[0].age;
+    let oldestName = people[0].name;
 
+    for (let i = 1; i < people.length; i++) {
+        if (people[i].age > maxAge) {
+            maxAge = people[i].age;
+            oldestName = people[i].name;
+            
+        }
+            
+    }
+    return oldestName;
+
+}
 
 // ---------------------------------------------------------------------
 // Exercise 12: namesAtLeastAge
