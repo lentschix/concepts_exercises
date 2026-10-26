@@ -64,7 +64,6 @@ function dayName(dayNumber) {
 }
 
 
-
 // ---------------------------------------------------------------------
 // Exercise 3: countVowels
 // Count the vowels (a, e, i, o, u - upper or lower case) in the text.
@@ -73,6 +72,20 @@ function dayName(dayNumber) {
 //   countVowels("Hello World") -> 3
 // ---------------------------------------------------------------------
 function countVowels(text) {
+    let count = 0;
+    for (let i = 0; i < text.length; i++) {
+        let char = text[i].toLowerCase();
+        switch (char) {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                count++;
+                break;
+        }
+    }
+    return count;
 }
 
 
