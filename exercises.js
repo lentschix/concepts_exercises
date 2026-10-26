@@ -88,7 +88,6 @@ function countVowels(text) {
     return count;
 }
 
-
 // ---------------------------------------------------------------------
 // Exercise 4: fizzBuzz
 // Build ONE string with the numbers from 1 to n, separated by ", ".
@@ -97,6 +96,23 @@ function countVowels(text) {
 //   fizzBuzz(5) -> "1, 2, Fizz, 4, Buzz"
 // ---------------------------------------------------------------------
 function fizzBuzz(n) {
+    if (n < 1) {
+        return "";
+    }
+    let result = []; 
+    for (let i = 1; i <= n; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            result.push("FizzBuzz");
+        } else if (i % 3 == 0) {
+            result.push("Fizz");
+        } else if (i % 5 == 0) {
+            result.push("Buzz");
+        } else {
+            result.push(i);
+        }
+
+    }
+    return result.join(", ");
 }
 
 
