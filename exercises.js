@@ -157,7 +157,6 @@ function buildTriangle(height) {
 
 }
 
-
 // ---------------------------------------------------------------------
 // Exercise 7: countWeekendDays
 // Count how many of the day numbers are Saturday or Sunday.
@@ -165,8 +164,15 @@ function buildTriangle(height) {
 //   countWeekendDays([1, 6, 7, 3]) -> 2
 // ---------------------------------------------------------------------
 function countWeekendDays(dayNumbers) {
+    let count = 0;
+    for (let i = 0; i < dayNumbers.length; i++) {
+        let name = dayName(dayNumbers[i]);
+        if (name === "Saturday" || name === "Sunday") {
+            count++
+        }
+    }
+    return count;
 }
-
 
 // ---------------------------------------------------------------------
 // Exercise 8: pointsToGrade
