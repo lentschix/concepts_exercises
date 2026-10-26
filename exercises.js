@@ -130,7 +130,7 @@ function isPalindrome(word) {
         if (word[left] !== word[right]) {
             return false;
         }
-        
+
     left++;
     right--;
 }
@@ -146,6 +146,15 @@ return true;
 //             ***
 // ---------------------------------------------------------------------
 function buildTriangle(height) {
+    if (height === 0) {
+        return "";
+    }
+    let rows = [];
+    for (let i = 1; i<=height; i++) {
+        rows.push("*".repeat(i));
+    }
+    return rows.join("\n");
+
 }
 
 
