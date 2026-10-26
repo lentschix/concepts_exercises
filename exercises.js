@@ -204,6 +204,30 @@ function pointsToGrade(points) {
 //       5 Insufficient
 // ---------------------------------------------------------------------
 function gradeReport(student) {
+    let grade = pointsToGrade(student.points);
+    let label;
+
+    switch (grade) {
+        case 1:
+             label = "Excellent";
+            break;
+        case 2: 
+            label = "Good";
+            break;
+        case 3: 
+            label = "Satisfactory";
+            break;
+        case 4: 
+            label = "Sufficient";
+            break;
+        case 5: 
+            label = "Insufficient";
+            break;
+        default:  
+            return "Invalid";
+    }
+    return student.name + ": " + grade + " (" + label + ")";
+
 }
 
 
